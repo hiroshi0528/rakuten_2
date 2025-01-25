@@ -8,8 +8,6 @@ import 'package:rakuten_2/%E8%B3%BC%E5%85%A5%E5%B1%A5%E6%AD%B4/browsing_history_
 import 'package:rakuten_2/enum/tab_type.dart';
 import 'package:rakuten_2/home/home_screen.dart';
 
-
-
 class TabNotifier extends StateNotifier<TabType> {
   TabNotifier() : super(TabType.home);
 
@@ -19,7 +17,7 @@ class TabNotifier extends StateNotifier<TabType> {
 }
 
 final tabNotifierProvider =
-StateNotifierProvider<TabNotifier, TabType>((ref) => TabNotifier());
+    StateNotifierProvider<TabNotifier, TabType>((ref) => TabNotifier());
 
 class TabScreen extends ConsumerWidget {
   const TabScreen({super.key});

@@ -6,9 +6,6 @@ import 'package:rakuten_2/%E8%B2%B7%E3%81%84%E7%89%A9%E3%81%8B%E3%81%94/shopping
 import 'package:rakuten_2/%E8%B3%BC%E5%85%A5%E5%B1%A5%E6%AD%B4/browsing_history_screen.dart';
 import '../home/home_screen.dart';
 
-
-
-
 enum TabType {
   home,
   search,
@@ -54,7 +51,7 @@ extension TabTypeEx on TabType {
     }
   }
 
-  Widget get navigator{
+  Widget get navigator {
     switch (this) {
       case TabType.home:
         return HomeScreen();

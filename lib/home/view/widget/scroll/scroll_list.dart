@@ -41,7 +41,7 @@ class ProductSection extends ConsumerWidget {
                     MaterialPageRoute(
                       builder: (context) => type.navigator,
                     ),
-                   );
+                  );
                   final tabNotifier = ref.read(tabNotifierProvider.notifier);
                   tabNotifier.setTab(TabType.home);
                 },

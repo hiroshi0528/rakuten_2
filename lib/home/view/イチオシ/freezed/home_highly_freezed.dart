@@ -10,7 +10,8 @@ class HomeHighlyItem with _$HomeHighlyItem {
     required List<Map<String, dynamic>> mediumImageUrls,
     required String itemPrice,
     @Default(false) bool isPremium,
-}) = _HomeHighlyItem;
+  }) = _HomeHighlyItem;
 
-  factory HomeHighlyItem.fromJson(Map<String, dynamic> json) => _$HomeHighlyItemFromJson(json);
+  factory HomeHighlyItem.fromJson(Map<String, dynamic> json) =>
+      _$HomeHighlyItemFromJson(json);
 }

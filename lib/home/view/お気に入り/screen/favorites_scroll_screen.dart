@@ -9,8 +9,8 @@ class FavoritesScrollScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('お気に入り'),
       ),
-      body: Center(child:
-      Text('お気に入り'),
+      body: Center(
+        child: Text('お気に入り'),
       ),
     );
   }

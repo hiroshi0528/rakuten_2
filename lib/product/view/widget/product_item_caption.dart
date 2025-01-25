@@ -30,7 +30,7 @@ class DetailsCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 ...entry.value.map(
-                      (detail) {
+                  (detail) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 4.0),
                       child: Row(

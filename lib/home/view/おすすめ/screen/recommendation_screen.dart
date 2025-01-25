@@ -1,9 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:rakuten_2/freezed/freezed.dart';
+import 'package:rakuten_2/models/item.dart';
 import 'package:rakuten_2/product/view/product_details_page.dart';
-
 
 class RecommendationScreen extends StatefulWidget {
   const RecommendationScreen({
@@ -37,8 +36,7 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
           // アイテム数を制限し、Itemオブジェクトのリストに変換
           _items = (data['Items'] ?? [])
               .take(_maxItems)
-              .map<Item>(
-                  (item) => Item.fromJson(item['Item']))
+              .map<Item>((item) => Item.fromJson(item['Item']))
               .toList();
         });
       } else {

@@ -9,8 +9,8 @@ class HighlyScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('今日のイチオシ'),
       ),
-      body: Center(child:
-      Text('今日のイチオシ'),
+      body: Center(
+        child: Text('今日のイチオシ'),
       ),
     );
   }

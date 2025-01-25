@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'freezed.dart';
+part of 'item.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
