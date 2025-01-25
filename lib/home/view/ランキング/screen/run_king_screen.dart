@@ -9,8 +9,8 @@ class RunKingScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('ランキング'),
       ),
-      body: Center(child:
-      Text('ランキング'),
+      body: Center(
+        child: Text('ランキング'),
       ),
     );
   }

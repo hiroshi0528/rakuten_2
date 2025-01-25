@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rakuten_2/freezed/freezed.dart';
+import 'package:rakuten_2/models/item.dart';
 import 'package:rakuten_2/product/view/widget/product_image.dart';
 import 'package:rakuten_2/product/view/widget/product_item_caption.dart';
 

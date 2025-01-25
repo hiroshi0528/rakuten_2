@@ -34,7 +34,7 @@ extension ProductSectionTypeEx on ProductSectionType {
     }
   }
 
-  Icon get iconData{
+  Icon get iconData {
     switch (this) {
       case ProductSectionType.recommendation:
         return Icon(Icons.next_plan_outlined);
@@ -49,7 +49,7 @@ extension ProductSectionTypeEx on ProductSectionType {
     }
   }
 
-  Widget get navigator{
+  Widget get navigator {
     switch (this) {
       case ProductSectionType.recommendation:
         return RecommendationScreen();
@@ -64,7 +64,7 @@ extension ProductSectionTypeEx on ProductSectionType {
     }
   }
 
-  Widget get card{
+  Widget get card {
     switch (this) {
       case ProductSectionType.recommendation:
         return HomeRecommendationList();

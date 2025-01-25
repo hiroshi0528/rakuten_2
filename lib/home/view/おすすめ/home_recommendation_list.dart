@@ -1,9 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:rakuten_2/freezed/freezed.dart';
+import 'package:rakuten_2/models/item.dart';
 import 'package:rakuten_2/product/view/product_details_page.dart';
-
 
 class HomeRecommendationList extends StatefulWidget {
   const HomeRecommendationList({super.key});

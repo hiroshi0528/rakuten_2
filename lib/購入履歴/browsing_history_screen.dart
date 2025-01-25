@@ -7,9 +7,7 @@ class PurchaseHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: BrowsingHistoryAppBar()
-      ),
+      appBar: AppBar(title: BrowsingHistoryAppBar()),
       body: Center(
         child: Text('購入履歴'),
       ),

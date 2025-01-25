@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:rakuten_2/freezed/freezed.dart';
+import 'package:rakuten_2/models/item.dart';
 
 class ProductCard extends StatefulWidget {
   final Item item;

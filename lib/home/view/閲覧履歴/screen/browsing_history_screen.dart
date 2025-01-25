@@ -9,8 +9,8 @@ class BrowsingHistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('閲覧履歴'),
       ),
-      body: Center(child:
-        Text('閲覧履歴'),
+      body: Center(
+        child: Text('閲覧履歴'),
       ),
     );
   }
