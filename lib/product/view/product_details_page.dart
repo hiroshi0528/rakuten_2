@@ -3,6 +3,8 @@ import 'package:rakuten_2/models/item.dart';
 import 'package:rakuten_2/product/view/widget/product_image.dart';
 import 'package:rakuten_2/product/view/widget/product_item_caption.dart';
 
+
+
 class ProductDetailsPage extends StatefulWidget {
   final Item item;
   const ProductDetailsPage({

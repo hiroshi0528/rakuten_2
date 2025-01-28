@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:rakuten_2/models/item.dart';
+import 'package:rakuten_2/providers/selected_products.dart';
 
-class ProductCard extends StatefulWidget {
+class ProductCard extends ConsumerStatefulWidget {
   final Item item;
   final PageController pageController;
   final int currentPage;
@@ -17,14 +19,16 @@ class ProductCard extends StatefulWidget {
   });
 
   @override
-  State<ProductCard> createState() => _ProductCardState();
+  ConsumerState<ProductCard> createState() => _ProductCardState();
 }
 
-class _ProductCardState extends State<ProductCard> {
-  bool _isTapped = false;
-
+class _ProductCardState extends ConsumerState<ProductCard> {
   @override
   Widget build(BuildContext context) {
+    // 現在の選択状態を取得
+    final selectedItems = ref.watch(selectedItemsProvider);
+    final isSelected = selectedItems.contains(widget.item);
+
     return Card(
       color: Colors.white,
       child: Padding(
@@ -63,13 +67,17 @@ class _ProductCardState extends State<ProductCard> {
               alignment: Alignment.centerRight,
               child: IconButton(
                 onPressed: () {
-                  setState(() {
-                    _isTapped = !_isTapped;
-                  });
+                  // 商品選択状態を切り替え
+                  final notifier = ref.read(selectedItemsProvider.notifier);
+                  if (isSelected) {
+                    notifier.removeItem(widget.item);
+                  } else {
+                    notifier.addItem(widget.item);
+                  }
                 },
                 icon: Icon(
-                  _isTapped ? Icons.star : Icons.star_border_outlined,
-                  color: _isTapped ? Colors.red : Colors.grey,
+                  isSelected ? Icons.star : Icons.star_border_outlined,
+                  color: isSelected ? Colors.red : Colors.grey,
                   size: 25,
                 ),
               ),
@@ -115,7 +123,19 @@ class _ProductCardState extends State<ProductCard> {
               child: Card(
                 color: Colors.orange,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // 商品を選択した場合の処理（ここにカスタムロジックを追加）
+                    final notifier = ref.read(selectedItemsProvider.notifier);
+                    if (!isSelected) {
+                      notifier.addItem(widget.item);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('${widget.item.itemName}をカートに追加しました。'),
+                          duration: const Duration(seconds: 2),
+                        ),
+                      );
+                    }
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
