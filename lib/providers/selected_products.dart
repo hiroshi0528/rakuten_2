@@ -22,8 +22,6 @@ class SelectedProductsNotifier extends StateNotifier<List<Item>> {
 
 // プロバイダーを定義
 final selectedItemsProvider =
-StateNotifierProvider<SelectedProductsNotifier, List<Item>>(
-      (ref) => SelectedProductsNotifier(),
+    StateNotifierProvider<SelectedProductsNotifier, List<Item>>(
+  (ref) => SelectedProductsNotifier(),
 );
-
-

@@ -111,7 +111,7 @@ class _HomeRecommendationListState extends State<HomeRecommendationList> {
                                         fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,
                                     maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
+                                    overflow: TextOverflow.visible,
                                   ),
                                   const SizedBox(height: 4),
                                   // 価格を表示

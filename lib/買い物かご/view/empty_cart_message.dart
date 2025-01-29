@@ -15,8 +15,7 @@ class EmptyCartMessage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(1),
                 side: BorderSide(
                   color: Colors.red,
-                )
-            ),
+                )),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
