@@ -77,7 +77,6 @@ class _RecommendationScreenState extends State<RecommendationScreen> {
               );
             },
             child: Card(
-              // elevation: 5,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),

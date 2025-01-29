@@ -15,6 +15,7 @@ class FavoritesAppBar extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        SizedBox(width: 55),
         TextButton(
           onPressed: () {},
           child: Text(

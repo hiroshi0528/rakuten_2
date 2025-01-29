@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rakuten_2/providers/selected_products.dart';
-import '../view/empty_cart_message.dart';
-import '../view/product_list.dart';
+
+import '../widget/empty_cart_message.dart';
+import '../widget/product_list.dart';
 
 class ShoppingCartScreen extends ConsumerWidget {
   const ShoppingCartScreen({super.key});

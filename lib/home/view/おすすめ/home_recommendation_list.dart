@@ -55,7 +55,7 @@ class _HomeRecommendationListState extends State<HomeRecommendationList> {
             children: [
               // 浮き上がった箱
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(4.0),
                 child: Container(
                   height: 240,
                   decoration: BoxDecoration(
