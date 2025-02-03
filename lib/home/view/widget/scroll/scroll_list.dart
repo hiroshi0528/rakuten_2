@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rakuten_2/enum/home_product_section_type.dart';
 import 'package:rakuten_2/enum/tab_type.dart';
 import 'package:rakuten_2/tab/tab_screen.dart';
+import 'package:rakuten_2/providers/favorites_products.dart';
 
 class ProductSection extends ConsumerWidget {
   const ProductSection({
@@ -14,9 +15,17 @@ class ProductSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    if (type == ProductSectionType.favorite) {
+      final favoriteItems = ref.watch(favoriteProvider);
+      if (favoriteItems.isEmpty) {
+        return SizedBox.shrink();
+      }
+    }
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
