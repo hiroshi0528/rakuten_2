@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rakuten_2/%E3%82%82%E3%81%A3%E3%81%A8%E8%A6%8B%E3%82%8B/more_screen.dart';
-import 'package:rakuten_2/%E6%8E%A2%E3%81%99/search_screen.dart';
-import 'package:rakuten_2/%E8%B3%BC%E5%85%A5%E5%B1%A5%E6%AD%B4/browsing_history_screen.dart';
+import 'package:rakuten_2/tabMore/more_screen.dart';
+import 'package:rakuten_2/tabSearch/search_screen.dart';
+import 'package:rakuten_2/tabShopping/screen/shopping_cart_screen.dart';
+import 'package:rakuten_2/tab_history/browsing_history_screen.dart';
 import 'package:rakuten_2/enum/tab_type.dart';
-import 'package:rakuten_2/home/home_screen.dart';
-
-import '../お気に入り/screen/favorites_screen.dart';
-import '../買い物かご/screen/shopping_cart_screen.dart';
+import 'package:rakuten_2/home/view/home/home_screen.dart';
+import 'package:rakuten_2/tabFavorite/screen/favorites_screen.dart';
 
 class TabNotifier extends StateNotifier<TabType> {
   TabNotifier() : super(TabType.home);

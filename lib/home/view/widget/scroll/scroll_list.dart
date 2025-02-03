@@ -13,7 +13,6 @@ class ProductSection extends ConsumerWidget {
 
   final ProductSectionType type;
 
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     if (type == ProductSectionType.favorite) {

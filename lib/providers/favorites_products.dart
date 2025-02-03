@@ -1,11 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rakuten_2/models/item.dart';
+import 'package:rakuten_2/models/recommendation/item.dart';
 
-class FavoritesProductsNotifier extends StateNotifier<List<Item>> {
+class FavoritesProductsNotifier
+    extends StateNotifier<List<RecommendationItem>> {
   FavoritesProductsNotifier() : super([]);
 
   /// お気に入りの追加・削除をトグルする
-  void toggleFavorite(Item item) {
+  void toggleFavorite(RecommendationItem item) {
     if (state.contains(item)) {
       removeFavorite(item);
     } else {
@@ -14,16 +15,17 @@ class FavoritesProductsNotifier extends StateNotifier<List<Item>> {
   }
 
   /// お気に入りから商品を削除
-  void removeFavorite(Item item) {
+  void removeFavorite(RecommendationItem item) {
     state = state.where((favItem) => favItem != item).toList();
   }
 
   /// 指定した商品がお気に入りか判定
-  bool isFavorite(Item item) {
+  bool isFavorite(RecommendationItem item) {
     return state.contains(item);
   }
 }
 
-final favoriteProvider = StateNotifierProvider<FavoritesProductsNotifier, List<Item>>(
-      (ref) => FavoritesProductsNotifier(),
+final favoriteProvider =
+    StateNotifierProvider<FavoritesProductsNotifier, List<RecommendationItem>>(
+  (ref) => FavoritesProductsNotifier(),
 );

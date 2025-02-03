@@ -1,16 +1,16 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/item.dart';
+import '../models/recommendation/item.dart';
 
-class SelectedProductsNotifier extends StateNotifier<List<Item>> {
+class SelectedProductsNotifier extends StateNotifier<List<RecommendationItem>> {
   SelectedProductsNotifier() : super([]);
 
   // 商品を追加
-  void addItem(Item item) {
+  void addItem(RecommendationItem item) {
     state = [...state, item];
   }
 
   // 商品を削除
-  void removeItem(Item item) {
+  void removeItem(RecommendationItem item) {
     state = state.where((i) => i.itemName != item.itemName).toList();
   }
 
@@ -22,6 +22,6 @@ class SelectedProductsNotifier extends StateNotifier<List<Item>> {
 
 // プロバイダーを定義
 final selectedItemsProvider =
-    StateNotifierProvider<SelectedProductsNotifier, List<Item>>(
+    StateNotifierProvider<SelectedProductsNotifier, List<RecommendationItem>>(
   (ref) => SelectedProductsNotifier(),
 );
