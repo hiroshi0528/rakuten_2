@@ -76,17 +76,6 @@ class HighlyProductCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      '商品説明',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 22,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
                   Text(item.itemCaption),
                 ],
               ),
