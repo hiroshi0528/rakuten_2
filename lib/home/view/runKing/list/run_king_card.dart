@@ -36,7 +36,8 @@ class RunKingCard extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 8),
-              Align(alignment: Alignment.centerLeft,
+              Align(
+                alignment: Alignment.centerLeft,
                 child: Text(
                   item.golfCourseAbbr,
                   style: const TextStyle(

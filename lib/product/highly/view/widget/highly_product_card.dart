@@ -27,8 +27,8 @@ class HighlyProductCard extends StatelessWidget {
                     child: Text(
                       item.japaneseTitle,
                       maxLines: 2,
-                      style:
-                          const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                   const SizedBox(height: 15),
